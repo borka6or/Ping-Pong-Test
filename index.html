@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>
+            Ping-Pong!
+
+        </title>
+    </head>
+    <body>
+        Ping-Pong!
+        <input id='greg'/>
+        <button id='Queefer'>
+            Queefer
+        </button>
+
+        <ul id='farts'>
+        </ul>
+    </body>
+    <script type='text/javascript'>
+        var jewsBurn = document.querySelector('#Queefer')
+        var input = document.querySelector('#greg')
+
+        jewsBurn.addEventListener('click', function() {
+            for(var i = 0, max = input.value; i <= max; i++) {
+                var message;
+
+                if(i % 3 === 0) {
+                    message = 'Ping';
+                } else if(i === 0) {
+                    message = i;
+                } else {
+                    message = i;
+                }
+
+                var listItemInsideTheUl = document.createElement('li');
+
+                listItemInsideTheUl.innerText = message
+                document.querySelector('#farts').appendChild(listItemInsideTheUl);
+            }
+        });
+
+    </script>
+</html>
