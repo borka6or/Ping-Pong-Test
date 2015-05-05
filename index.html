@@ -7,36 +7,36 @@
     </head>
     <body>
         Ping-Pong!
-        <input id='greg'/>
-        <button id='Queefer'>
-            Queefer
+        <input id='Element'/>
+        <button id='Submit'>
+            Submit
         </button>
 
-        <ul id='farts'>
+        <ul id='ulElement'>
         </ul>
     </body>
     <script type='text/javascript'>
-        var jewsBurn = document.querySelector('#Queefer')
-        var input = document.querySelector('#greg')
+        var inputValue = window.prompt('What number would you like me to ping-pong up to?');
 
-        jewsBurn.addEventListener('click', function() {
-            for(var i = 0, max = input.value; i <= max; i++) {
-                var message;
+        for(var i = 1, max = inputValue; i <= max; i++) {
+            var message;
 
-                if(i % 3 === 0) {
-                    message = 'Ping';
-                } else if(i === 0) {
-                    message = i;
-                } else {
-                    message = i;
-                }
 
-                var listItemInsideTheUl = document.createElement('li');
-
-                listItemInsideTheUl.innerText = message
-                document.querySelector('#farts').appendChild(listItemInsideTheUl);
+            if(i % 3 === 0 && i % 5 === 0) {
+                message = 'PingPong';
+            } else if (i % 3 === 0) {
+                message = 'Ping';
+            } else if (i % 5 === 0) {
+                message = 'Pong';
+            } else {
+                message = i;
             }
-        });
+
+            var listItemInsideTheUl = document.createElement('li');
+
+            listItemInsideTheUl.innerText = message
+            document.querySelector('#ulElement').appendChild(listItemInsideTheUl);
+        }
 
     </script>
 </html>
